@@ -1,0 +1,18 @@
+<%= form_for @recipe, url: {action: 'update'}, method: :patch do |f| %>
+  <fieldset>
+    <legend> Edit Recipe </legend>
+    <%= f.label :dish %>
+    <%= f.text_field :dish %>
+    <br>
+    <%= f.label :ingredients %>
+    <%= f.text_area :ingredients %>
+    <br>
+
+    <%= f.label :directions %>
+    <%= f.text_area :directions %>
+    <br>
+    <%= f.label :person_id, "Submitted by:" %>
+    <%= f.collection_select(:person_id, Person.all, :id, :name, prompt: "Submitted by:") %>
+  </fieldset>
+    <%= f.submit %>
+    <% end %>

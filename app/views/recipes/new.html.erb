@@ -1,0 +1,15 @@
+<%= form_for Recipe.new do |f| %>
+  <fieldset>
+    <legend> Add a New Recipe </legend>
+    <%= f.label :dish %>
+    <%= f.text_field :dish %>
+    <br>
+    <%= f.label :ingredients %>
+    <%= f.text_field :ingredients %>
+    <br>
+    <%= f.label :person_id, "Submitted by:" %>
+    <%= f.collection_select(:person_id, Person.all, :id, :name, prompt: "Submitted by:") %>
+    <br>
+  </fieldset>
+  <%= f.submit %>
+<% end %>

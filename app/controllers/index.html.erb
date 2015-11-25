@@ -1,0 +1,21 @@
+    <h1> What's Da Happs </h1>
+    <h2><a class = "new" href="/tasks/new">add a new task</a></h2>
+    <div>
+    <ul>
+      <% @tasks.each do |task| %>
+        <li>
+          <%= link_to task.name, "/tasks/#{task.id}" %> ✍ <br>
+            <% if !task.person.nil? %>
+            <%= link_to task.person.name, "/people/#{task.person_id}/tasks"  %> ℹ︎
+            <br>
+            <% end %>
+          <%= link_to 'DELETE TASK ⌧',  { action: :destroy, id: task.id }, method: :delete, data: { confirm: 'Delete Task, For Real?' } %> <br>
+          <% if !task.date_completed.nil? %>
+              <div class ="status"> STATUS: COMPLETED </div>
+          <% else %>
+              <%= link_to 'MARK AS COMPLETE ✔︎', "/tasks/#{task.id}/completed", method: :patch %>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+  </div>

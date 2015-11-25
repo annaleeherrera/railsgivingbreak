@@ -1,0 +1,9 @@
+<h1><%= @recipe.dish %></h1>
+  <h2><%= @recipe.person.name %> </h2>
+  <h2><%= @recipe.ingredients %></h2>
+  <h2><%= @recipe.directions %></h2>
+
+
+  <p><%= link_to "BACK TO RECIPES", "/recipes/" %> </p>
+  <p><%= link_to "EDIT RECIPE", "/recipes/#{@recipe.id}/edit" %> </p>
+  <p><%= link_to "DELETE RECIPE",  { action: :destroy, id: @recipe.id }, method: :delete, data: { confirm: 'Delete Recipe, For Real?' } %> </p><br>
