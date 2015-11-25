@@ -1,14 +1,10 @@
+<img src = "/assets/wallmount.png">
 <h1> Ada's Kitchen </h1>
-
-<h2> Dish </h2>
 <table>
-  <td>
-  <tr>
-    <% @recipes.each do |recipe| %>
-      <%= link_to recipe.dish, "/recipes/#{recipe.id}" %> <br>
+  <th> Let's Eat </th>
+    <tr><% @recipes.each do |recipe| %>  </tr>
+      <td><%= link_to recipe.dish, "/recipes/#{recipe.id}" %> </td> <br>
     <% end %>
-  </tr>
-  </td>
 </table>
 
 <%= form_for Recipe.new do |f| %>
