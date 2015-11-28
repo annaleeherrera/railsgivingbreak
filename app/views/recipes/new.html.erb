@@ -5,11 +5,13 @@
     <%= f.text_field :dish %>
     <br>
     <%= f.label :ingredients %>
-    <%= f.text_field :ingredients %>
+    <%= f.text_area :ingredients %>
+    <br>
+    <%= f.label :directions %>
+    <%= f.text_area :directions %>
     <br>
     <%= f.label :person_id, "Submitted by:" %>
-    <%= f.collection_select(:person_id, Person.all, :id, :name, prompt: "Submitted by:") %>
-    <br>
+    <%= f.collection_select(:person_id, Person.all, :id, :name, prompt: "Your Name") %>
   </fieldset>
-  <%= f.submit %>
-<% end %>
+  <%= submit_tag "Create Recipe" %>
+  <% end %>

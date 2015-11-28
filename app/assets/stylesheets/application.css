@@ -1,41 +1,69 @@
-
- body {
-  text-align: center;
-  font-family: 'Poiret One', monospace;
-  font-size: 20px;
+img {
+  zoom: 30%;
+  margin: auto;
+  display: block;
 }
 
 h1 {
   font-family: 'Amatic SC', monospace;
   font-size: 100px;
   text-align: center;
+  margin-bottom: -5px;
+  display: block;
 }
 
-img {
-  zoom: 30%;
-  margin: auto;
+nav {
+  margin-top: 15px;
+  font-size: 20px;
 }
 
-h2 {
-  font-family: 'Poiret One', monospace;
-  font-size: 70px;
+body {
   text-align: center;
-}
-
-table {
   font-family: 'Poiret One', monospace;
-  font-size: 50px;
-  text-align: left;
-  margin: auto;
+  font-size: 40px;
 }
 
 fieldset {
   font-size: 20px;
-  width: 450px;
-  float: inherit;
+  width: 500px;
   margin: auto;
-  margin-top: 60px;
-  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+form {
+  margin-top: 100px;
+}
+
+h2 {
+  font-family: 'Poiret One', monospace;
+  font-size: 60px;
+  text-align: center;
+
+}
+
+h3 {
+  font-size: 20px;
+}
+
+li {
+  list-style-type: none;
+  font-size: 10px;
+}
+
+.chefs {
+  font-family: 'Poiret One', monospace;
+  font-size: 30px;
+  text-align: left;
+  margin: auto;
+
+}
+
+.indextable {
+  font-family: 'Poiret One', monospace;
+  font-size: 50px;
+  text-align: left;
+  margin: auto;
+  margin-top: -500px;
 }
 
 legend {

@@ -1,0 +1,7 @@
+<h2> Chef <%= @person.name %>'s Recipes</h2>
+
+  <% @person.recipes.each do |recipe| %>  <br>
+  <h2><%= recipe.dish %><br></h2>
+  <%= recipe.ingredients %><br>
+  <%= recipe.directions %>
+  <% end %>

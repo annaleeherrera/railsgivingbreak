@@ -5,10 +5,16 @@ class RecipesController < ApplicationController
     @people = Person.all
   end
 
-  def new
+  def home
     @recipe = Recipe.new
-    id = params[:id]
-    @person = Person.find(id)
+    @recipes = Recipe.all
+    @people = Person.all
+  end
+
+
+  def new
+    @person = Person.new
+    @recipe = Recipe.new
   end
 
   def create

@@ -2,11 +2,12 @@ class PeopleController < ApplicationController
   def index
     @people = Person.all
     @person = Person.new
+    @recipe = Recipe.new
   end
 
   def new
-    @recipe = Recipe.new
-    @person = Person.new
+    @person = Person.find(id)
+    redirect_to "/"
   end
 
   def recipes

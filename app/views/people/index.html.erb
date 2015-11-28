@@ -1,0 +1,9 @@
+<h2> Ada Cohort 4 Chefs </h2>
+
+<table class ="chefs">
+  <tr><% @people.each do |person| %></tr>
+  <li>
+  <td>  ⦿ <%= link_to person.name, "/people/#{person.id}/recipes" %>  <br></td>
+    <% end %>
+  </li>
+</table>
