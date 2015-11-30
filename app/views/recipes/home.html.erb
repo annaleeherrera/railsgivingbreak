@@ -1,5 +1,6 @@
 <table class="indextable">
 <h2> Let's Eat </h2> <br>
+<table>
   <tr><% @recipes.each do |recipe| %> </tr>
     <% if !recipe.person.nil? %>
       <td><%= link_to recipe.dish, "/recipes/#{recipe.id}" %> </td> <br>

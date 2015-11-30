@@ -14,8 +14,18 @@ people = [
   {name: "Jennie"},
   {name: "Emily"},
   {name: "Daphne"},
-  {name: "Jessica"}
-
+  {name: "Riley"},
+  {name: "Hailey"},
+  {name: "Jenna"},
+  {name: "Rebecca"},
+  {name: "Brittany"},
+  {name: "Claire"},
+  {name: "Sarah"},
+  {name: "Lauren"},
+  {name: "Ricky"},
+  {name: "Katherine"},
+  {name: "Meighan"},
+  {name: "Tammy"}
 ]
 
 people.each do |person|
