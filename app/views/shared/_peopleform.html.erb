@@ -1,0 +1,6 @@
+<%= form_for @person, url:{ action: @action } do |f| %>
+  <h1> <%= @title %></h1>
+  <%= f.label :name %>
+  <%= f.text_field :name %><br>
+  <%= f.submit "Submit" %>
+<% end %>
