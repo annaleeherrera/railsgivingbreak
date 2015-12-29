@@ -1,9 +1,12 @@
 <h2> Ada Cohort 4 Chefs </h2>
 
+<%= link_to "Add A Chef", "/people/new" %>
+<br>
+
 <table class ="chefs">
   <tr><% @people.each do |person| %></tr>
   <li>
-  <td>  ⦿ <%= link_to person.name, "/people/#{person.id}/recipes" %>  <br></td>
+  <td>  ⦿ <%= link_to person.name, "/people/#{person.id}/recipes" %> | <%= link_to "Edit", "/people/#{person.id}/edit" %> | <%= link_to "Remove", "/people/#{person.id}", method: :delete %> <br></td>
     <% end %>
   </li>
 </table>
