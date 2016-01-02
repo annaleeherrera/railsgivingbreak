@@ -25,6 +25,7 @@ people = [
   {name: "Ricky"},
   {name: "Katherine"},
   {name: "Meighan"},
+  {name: "Kelly"},
   {name: "Tammy"}
 ]
 
