@@ -1,4 +1,5 @@
 <h2><%= @recipe.person.name %>'s <%= @recipe.dish %></h2>
+  <p> <%= image_tag @recipe.image.url if @recipe.image %></p>
   Ingredients: <%= @recipe.ingredients %> <br>
   Directions: <%= @recipe.directions %>
   <h3><%= link_to "BACK TO RECIPES", "/recipes/home" %> </h3>

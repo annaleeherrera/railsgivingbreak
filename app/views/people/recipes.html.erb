@@ -2,6 +2,7 @@
 
   <% @person.recipes.each do |recipe| %>  <br>
   <h2><%= recipe.dish %><br></h2>
+  <p> <%= image_tag @recipe.image.url if @recipe.image %></p>
   <%= recipe.ingredients %><br>
   <%= recipe.directions %>
   <% end %>
