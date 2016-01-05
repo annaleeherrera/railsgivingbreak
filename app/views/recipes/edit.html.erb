@@ -1,4 +1,4 @@
-<%= form_for @recipe, url: {action: 'update'}, method: :patch do |f| %>
+<%= form_for @recipe, :html => {:multipart => true} , url: {action: 'update'}, method: :patch do |f| %>
   <fieldset>
     <legend> Edit Recipe </legend>
     <%= f.label :dish %>
@@ -11,10 +11,11 @@
     <%= f.label :directions %>
     <%= f.text_area :directions %>
     <br>
+    <%= f.label :upload_an_image %>
+    <%= f.file_field :image %>
+    <br>
     <%= f.label :person_id, "Submitted by:" %>
     <%= f.collection_select(:person_id, Person.all, :id, :name, prompt: "Submitted by:") %>
   </fieldset>
     <%= f.submit %>
     <% end %>
-
-  

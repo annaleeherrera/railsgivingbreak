@@ -1,4 +1,4 @@
-<%= form_for Recipe.new do |f| %>
+<%= form_for Recipe.new, :html => {:multipart => true} do |f| %>
   <fieldset>
     <legend> Add a New Recipe </legend>
     <%= f.label :dish %>
@@ -9,6 +9,9 @@
     <br>
     <%= f.label :directions %>
     <%= f.text_area :directions %>
+    <br>
+    <%= f.label :upload_an_image %>
+    <%= f.file_field :image %>
     <br>
     <%= f.label :person_id, "Submitted by:" %>
     <%= f.collection_select(:person_id, Person.all, :id, :name, prompt: "Your Name") %>
