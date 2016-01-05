@@ -1,6 +1,6 @@
 <h2> Chef <%= @person.name %>'s Recipes</h2>
-
-  <% @person.recipes.each do |recipe| %>  <br>
+<p> <%= image_tag @person.image.url(:large) if @person.image %></p>
+  <% @person.recipes.each do |recipe| %>
   <h2><%= recipe.dish %><br></h2>
   <p> <%= image_tag recipe.image.url(:thumb) if recipe.image %></p>
   <%= recipe.ingredients %><br>
