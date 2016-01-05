@@ -1,6 +1,10 @@
 <%= form_for @person, :html => {:multipart => true}, url:{ action: @action } do |f| %>
   <h1> <%= @title %></h1>
   <%= f.label :name %>
-  <%= f.text_field :name %><br>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label :upload_an_image %>
+  <%= f.file_field :image %>
+  <br>
   <%= f.submit "Submit" %>
 <% end %>
